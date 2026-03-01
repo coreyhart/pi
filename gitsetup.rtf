@@ -1,0 +1,310 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\froman\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\fnil\fprq2\fcharset0 Noto Sans;}{\f6\fnil\fprq2\fcharset0 FreeSans;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet{\s0\snext0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052 Normal;}
+{\*\cs15\snext15\loch\cf9\ul\ulc0 Hyperlink;}
+{\*\cs16\snext16\loch\cf9\ul\ulc0 ListLabel 1;}
+{\*\cs17\snext17\loch\cf9\ul\ulc0 ListLabel 2;}
+{\*\cs18\snext18\loch\cf9\ul\ulc0 ListLabel 3;}
+{\s19\sbasedon0\snext20\rtlch\af6\afs28 \ltrch\hich\af4\loch\sb240\sa120\keepn\f4\fs28\dbch\af5 Heading;}
+{\s20\sbasedon0\snext20\loch\sl276\slmult1\sb0\sa140 Body Text;}
+{\s21\sbasedon20\snext21\rtlch\af6 \ltrch\loch\sl240\slmult1\sb0\sa0 List;}
+{\s22\sbasedon0\snext22\rtlch\af6\afs24\ai \ltrch\loch\sb120\sa120\fs24\i caption;}
+{\s23\sbasedon0\snext23\rtlch\af6 \ltrch Index;}
+}{\*\generator LibreOffice/25.2.3.2$Linux_AARCH64 LibreOffice_project/520$Build-2}{\info{\creatim\yr2026\mo2\dy28\hr11\min37}{\revtim\yr2026\mo2\dy28\hr19\min11}{\printim\yr0\mo0\dy0\hr0\min0}}{\*\userprops}\deftab709
+\hyphauto1\viewscale100\formshade\nobrkwrptbl\paperh16838\paperw11906\margl1134\margr1134\margt1134\margb1134\sectd\sbknone\sftnnar\saftnnrlc\sectunlocked1\pgwsxn11906\pghsxn16838\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\fet\aftnrstcont\aftnstart1\aftnnrlc
+{\*\ftnsep\chftnsep}\pgndec\pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+Quick guide to setting up git}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#--Preamble \u8211\'96names in my demo that you should change}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+##protip:  save this doc locally, find and replace with what you want to use.}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#remote gitbus username is called \u8220\'93gituser\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#remote github repository is called \u8220\'93myrepo\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#remote github displayed name on commits is called \u8220\'93me\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#remote github displayed email address is called \u8220\'93your}{{\field{\*\fldinst HYPERLINK "mailto:coreyhhart@gmail.com" }{\fldrslt {\loch\loch\cf9\ul\ulc0\cf9\ul\ulc0\loch
+n}{}}}\loch
+oreply@github.com\u8221\'94 }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## to find yours: }{{\field{\*\fldinst HYPERLINK "https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address" }{\fldrslt {\loch\loch\cf9\ul\ulc0\cf9\ul\ulc0\loch
+https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address}}}}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#local computer is called \u8220\'93demo\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#local user is called \u8220\'93user\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#local ssh key pair is named \u8220\'93mykeyname\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#local ssh key passphrase is XXX  \u8592\'3f don\u8217\'92t save real value in this doc}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#local name for git repository is:\u8221\'94origin\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#name for remote branch of repository is \u8220\'93master\u8221\'94 }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#---0}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#update and install dependencies}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~ $ sudo apt update}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~ $ sudo apt upgrade}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~ $ sudo apt install git}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~ $ sudo apt install ssh}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#---1}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#create SSH key for access to github}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#go to ssh directory (assumes start from ./home/user/)}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ cd ./.ssh}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#if it does not exist, you need to use ssh once and it will be created}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## you can do \u8220\'93ssh -T git@github.com\u8221\'94, note it will error but the folder will be created}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+###if it asks to add a fingerprint select yes}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ ssh-keygen -t ed25519 }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#asks for name e.g. \u8220\'93mykeyname\u8221\'94 can also leave as default}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#asks if you want to make a passphrase, you should, using XXX as example}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ ls}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#you should two new files, a private and public key}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#never share private key, please}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#lets see contents of public key so we can copy to github}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#copy this output to ssh keys in settings in github }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## Profile, Settings, SSH and GPG Keys}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+### You may need to right click in terminal if using gui to copy.}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ cat mykeyname.pub}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#verify}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~/git $ ssh -T git@github.com}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab Enter passphrase for key '/home/user/.ssh/id_mykeyname':   XXX}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#should get success message, if not use \u8220\'93ssh -v git@github.com\u8221\'94 to troubleshoot}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#---2}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#configure git}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ cd ~/}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ mkdir git}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ cd git/}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~/git $ git init}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ git config --global user.name "me"}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ git config --global user.email "your}{\loch\cf9\ul\ulc0\loch
+n}{\loch
+oreply@github.com"}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## suggested: github, profile, settings, email, no-reply address listed toward top of page}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#add remote repository}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#many tutorials use \u8220\'93origin\u8221\'94 as name but you can do something else}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~/git $ git remote add origin git@github.com:gituser/myrrepo.git}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## you can re-point later if needed using \u8220\'93git remote set-url origin git@github.com:gituser/myrrepo.git\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#verify}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~ $ git config \u8211\'96list}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{{\field{\*\fldinst HYPERLINK "mailto:user.email%3Dcoreyhhart@gmail.com" }{\fldrslt {\loch\loch\cf9\ul\ulc0\cf9\ul\ulc0\loch
+#}{}}}\loch
+should look like the values you just set}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~/git $ git remote -v}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{{\field{\*\fldinst HYPERLINK "mailto:user.email%3Dcoreyhhart@gmail.com" }{\fldrslt {\loch\loch\cf9\ul\ulc0\cf9\ul\ulc0\loch
+#}{}}}\loch
+should look like the values you just set}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#---3}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#use git}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#pull [repository] [branch]}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#many tutorials use \u8220\'93origin\u8221\'94 and \u8220\'93master\u8221\'94 but you don\u8217\'92t have to}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~/git $ git pull origin master}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+\tab user@demo:~/git $ ls}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#should see files from repository}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#make new file to try out}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~/git $ nano test.txt}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#add, stage, commit.  Status checks optional}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~/git $ git add test.txt }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~/git $ git status}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~/git $ git stage test.txt }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~/git $ git status}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~/git $ git commit -m \u8220\'93this is a commit message\u8221\'94}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+user@demo:~/git $ git push origin master}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+Enter passphrase for key  '/home/user/.ssh/id_mykeyname':  XXX }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#optional }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+##To push the current branch and set the remote as upstream, use}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+###   git push --set-upstream origin master}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## To have this happen automatically for branches without a tracking upstream, see }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+### 'push.autoSetupRemote' in 'git help config'.}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#--Troubleshooting}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#if you get:}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{
+ }{\loch
+##! [remote rejected] master -> master (push declined due to email privacy restrictions)}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## then look at help page listed in preamble }
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## suggest you remove the test file, fix config, and try again.}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## to remove test file [WARNING it deletes it!]}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+### user@demo:~/git $ git revert HEAD}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql\loch
+
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+#if in hurry and just need remote directory}
+\par \pard\plain \s0\rtlch\af6\afs24\alang1081 \ltrch\lang2057\langfe2052\hich\af3\loch\widctlpar\hyphpar0\ltrpar\cf0\f3\fs24\lang2057\kerning1\dbch\af5\langfe2052\ql{\loch
+## user@demo:~/git $ git pull  https://github.com/gituser/myrepo}
+\par }
