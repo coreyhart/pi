@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # *utf-8* [i think]
 # blink.py
-# Python Script to take a picture
+# Python Script to blink some leds
 # Corey Hart
 # corey@trusteddatapipeline.com
 # 28 Feb 2026
@@ -17,89 +17,50 @@
 # CONFIG
 ##set pin numbers
 
-LIGHT = 1.5
-DELAY = .5
-
-###right side 20 pin  
-LED_1 = 16
-LED_2 = 18
-LED_3 = 22
-
-###left side 20 pin
-LED_6 = 11
-LED_7 = 13
-LED_8 = 15
-
-##addl w 40 pin ,r then l
-#LED_4 = 32
-#LED_5 = 36
-
-#LED_9 = 29
-#LED_10 = 31
-#LED_11 = 33
-#LED_12 = 37
+LIGHT = 2
+DELAY = 1.5
+PINS = [11,13,15,16,18]
+#APINS = [29,31,33,37,22,32,36]
 
 #-----------------------------------------------
 # Import Raspberry Pi GPIO library
 import RPi.GPIO as GPIO 
-# would need more changes to use: import lgpio as GPIO
 
 #for sleep
 import time
 
+#setup pins
+GPIO.setmode(GPIO.BOARD)
+T=0
+while T < len(PINS):
+    GPIO.setup(PINS[T], GPIO.OUT, initial=GPIO.LOW)
+    T = T+1
+GPIO.output(11, GPIO.LOW)
+GPIO.output(18, GPIO.HIGH)
 
-GPIO.setmode(GPIO.BOARD) 
-GPIO.setup(LED_1, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(LED_2, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(LED_3, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(LED_6, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(LED_7, GPIO.OUT, initial=GPIO.LOW)
-GPIO.setup(LED_8, GPIO.OUT, initial=GPIO.LOW)
-
-### light leds in order
+### make function to light leds in order of array
 def chase():
     
+    C = 0
+    
     while True: # Run forever
-   
-        print("\n" * 3) #"clear" screen
+        print("\n" * 1) #"clear" screen
         
-        print(f'pin {LED_1}')
-        GPIO.output(LED_1, GPIO.HIGH) # on
+        #manage counter
+        if C >=5:
+            C =0
+        
+        #blink pin
+        print(f'pin {PINS[C]}')
+        GPIO.output(PINS[C], GPIO.HIGH) # on
         time.sleep(LIGHT)
-        GPIO.output(LED_1, GPIO.LOW) # off               
+        GPIO.output(PINS[C], GPIO.LOW) # off               
         time.sleep(DELAY)
        
-        print(f'pin {LED_2}')
-        GPIO.output(LED_2, GPIO.HIGH) # on
-        time.sleep(LIGHT)
-        GPIO.output(LED_2, GPIO.LOW) # off               
-        time.sleep(DELAY)
-        
-        print(f'pin {LED_3}')
-        GPIO.output(LED_3, GPIO.HIGH) # on
-        time.sleep(LIGHT)
-        GPIO.output(LED_3, GPIO.LOW) # off               
-        time.sleep(DELAY)
-        
-        print(f'pin {LED_6}')
-        GPIO.output(LED_6, GPIO.HIGH) # on
-        time.sleep(LIGHT)
-        GPIO.output(LED_6, GPIO.LOW) # off               
-        time.sleep(DELAY)
-        
-        print(f'pin {LED_7}')
-        GPIO.output(LED_7, GPIO.HIGH) # on
-        time.sleep(LIGHT)
-        GPIO.output(LED_7, GPIO.LOW) # off               
-        time.sleep(DELAY)
-        
-        print(f'pin {LED_8}')
-        GPIO.output(LED_8, GPIO.HIGH) # on
-        time.sleep(LIGHT)
-        GPIO.output(LED_8, GPIO.LOW) # off               
-        time.sleep(DELAY)
-       
-  
+        #increment counter
+        C = C+1
+      
+#Call chase function we just defined      
 chase()
 
 GPIO.cleanup() # Clean up
